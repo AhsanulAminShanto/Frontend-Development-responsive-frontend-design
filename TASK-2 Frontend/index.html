@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo-and-menu">
+            <div class="logo">CIRCLE</div>
+            <div class="hamburger-menu" id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="login-btn">Customer Login</a>
+            <a href="#" class="signup-btn">Sign up</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <p>An AI tool made for conversion rate optimization</p>
+        <h1>Increase your <br> conversion rate <span>using AI</span></h1>
+        <button class="cta-btn">Create account</button>
+        <p class="trial-info">
+            <span>30 Days free trial</span>
+            <span style="margin: 0 1.5rem;">|</span>
+            <span>No credit card required</span>
+        </p>
+        
+        <!-- Video Section -->
+        <div class="video-container">
+            <video id="video-player" width="800" height="450" controls>
+                <source src="1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="play-button" id="play-video">
+                <img src="00.png" alt="Play Video">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.logo-and-menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.login-btn,
+.signup-btn {
+    margin-left: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: #333;
+}
+
+.signup-btn {
+    background-color: black;
+    color: #fff;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 500px;
+    margin-right: auto;
+    margin-right: 0;
+    position: relative;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin: 2px 0;
+}
+
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero h1 span {
+    background: linear-gradient(to right, #ff00c8, #0000ff); /* Gradient for desktop */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.cta-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.trial-info {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 1rem 0;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+}
+
+#video-player {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+/* Play Button */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* Responsive Styles */
+@media (max-width: 722px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        position: absolute; /* Position to the right of the nav */
+        right: 3rem; /* Adjust as necessary */
+        top: 1rem; /* Align with the top padding of the nav */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .auth-buttons {
+        display: none;
+    }
+
+    .hero h1 span {
+        color: #ff00c8; /* Solid color for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        font-size: 0.9rem;
+    }
+
+    .trial-info {
+        font-size: 0.8rem;
+    }
+
+    #video-player {
+        max-width: 100%;
+    }  
+}
+
+@media (max-width: 479px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .cta-btn {
+        font-size: 0.8rem;
+    }
+
+    .trial-info {
+        font-size: 0.7rem;
+    }
+
+    #video-player {
+        max-width: 100%;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
